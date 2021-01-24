@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+     <head>
+          <meta charset="utf-8">
+          <title>HTML Academy: Техномарт</title>
+     </head>
+     <body class="page">
+          <div class="container">
+               <header class="header">
+                    <div class="header__panel">
+                         <a class="header__logo">ТЕХНОМАРТ</a>
+
+                         <div class="search">
+                              <img src="icons/search-icon.svg" alt="">
+                              <label for="search">Поиск</label>
+                              <input type="search" name="search" id="search" placeholder="Поиск">
+                         </div>
+
+                         <a href="#">
+                              <img src="icons/bookmark-icon.svg" alt="">
+                              <span>Закладки: 0</span>
+                         </a>
+
+                         <form action="get">
+                              <a href="#">
+                                   <img src="icons/shopping-cart-icon.svg" alt="">
+                                   <span>Корзина: 0</span>
+                              </a>
+
+                              <button type="submit">
+                                   <span>Оформить заказ</span>
+                              </button>
+                         </form>
+                    </div>
+
+                    <div class="header__block">
+                         <h1>
+                              Интернет-магазин
+                              строительных материалов
+                              и инструментов для ремонта
+                         </h1>
+
+                         <div class="header__contacts">
+                              <a href="tel:+78125550555">
+                                   <img src="icons/phone-icon.svg" alt="">
+                                   <span>+7 (812) 555-05-55</span>
+                              </a>
+                              <span>
+                              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+                              </span>
+                         </div>
+
+                         <div class="header__authentication">
+                              <div class="header__user">
+                                   <img src="icons/user-icon.svg" alt="">
+                                   <span>Равшан Джамшутович</span>
+                                   <a href="#">
+                                        <img src="icons/login-icon.svg" alt="">
+                                   </a>
+
+                              </div>
+                              <div class="header__information">
+                                   <a href="#">Мои заказы</a>
+                                   <a href="#">Личный кабинет</a>
+                              </div>
+                         </div>
+                    </div>
+
+                    <nav class="header__menu">
+                         <ul>
+                              <li><a href="index.html">Главная</a></li>
+                              <li><a href="blank.html">Компания</a></li>
+                              <li><a href="catalog.html">Каталог</a></li>
+                              <li><a href="blank.html">Новости</a></li>
+                              <li><a href="blank.html">Спецпредложения</a></li>
+                              <li><a href="blank.html">Доставка</a></li>
+                              <li><a href="blank.html">Контакты</a></li>
+                         </ul>
+                    </nav>
+               </header>
+
+               <main class="main">
+                    <ul>
+                         <li>
+                              <a href="index.html"><img src="icons/home-icon.svg" alt=""></a>
+                         </li>
+                         <li>
+                              <a href="catalog.html">Каталог</a>
+                         </li>
+                         <li>
+                              <a href="#">Инструмент</a>
+                         </li>
+                         <li>
+                              <a href="#">Перфораторы</a>
+                         </li>
+                    </ul>
+
+                    <h2>Перфораторы</h2>
+
+                    <form class="products__filters" action="get">
+                         <span>Фильтр:</span>
+                         <fieldset class="products__price">
+                              <legend>Цена:</legend>
+                              <div class="products__filter">
+                                   <!--тут реализация ползунка-->
+                              </div>
+                         </fieldset>
+                         <fieldset class="products__manufactorers">
+                              <legend>Производители:</legend>
+                              <ul>
+                                   <li>
+                                        <input type="checkbox" name="bosch" id="filter-bosch" checked>
+                                        <label for="filter-bosch">Bosch</label>
+                                   </li>
+                                   <li>
+                                        <input type="checkbox" name="interskol" id="filter-interskol">
+                                        <label for="filter-interskol">Интерскол</label>
+                                   </li>
+                                   <li>
+                                        <input type="checkbox" name="makita" id="filter-makita" checked>
+                                        <label for="filter-makita">Makita</label>
+                                   </li>
+                                   <li>
+                                        <input type="checkbox" name="dewalt" id="filter-dewalt">
+                                        <label for="filter-dewalt">DeWalt</label>
+                                   </li>
+                                   <li>
+                                        <input type="checkbox" name="hitachi" id="filter-hitachi">
+                                        <label for="filter-hitachi">Hitachi</label>
+                                   </li>
+                              </ul>
+                         </fieldset>
+                         <fieldset class="products__power">
+                              <legend>Питание:</legend>
+                              <ul>
+                                   <li>
+                                        <input type="radio" name="power" value="accumulator" id="filter-accumulator">
+                                        <label for="filter-accumulator">Аккумуляторные</label>
+                                   </li>
+                                   <li>
+                                        <input type="radio" name="power" value="plug-in" id="filter-plug-in" checked>
+                                        <label for="filter-plug-in">Сетевые</label>
+                                   </li>
+                              </ul>
+                         </fieldset>
+                         <button type="submit">Показать</button>
+                    </form>
+
+                    <section class="products__block">
+                         <div class="products__sorting">
+                              <span>Сортировка</span>
+                              <button type="button">По цене</button>
+                              <button type="button">По типу</button>
+                              <button type="button">По функционалу</button>
+                         </div>
+                         <div class="products__items">
+                              <ul>
+                                   <li><img src="img/BOSCH-BFG-6000.png" alt="Перфоратор BOSCH BFG 6000"></li>
+                                   <li><img src="img/BOSCH-BFG-6000.png" alt="Перфоратор BOSCH BFG 6000"></li>
+                                   <li><img src="img/BOSCH-BFG-6000.png" alt="Перфоратор BOSCH BFG 6000"></li>
+                                   <li><img src="img/BOSCH-BFG-3000.png" alt="Перфоратор BOSCH BFG 3000"></li>
+                                   <li><img src="img/BOSCH-BFG-6000.png" alt="Перфоратор BOSCH BFG 6000"></li>
+                                   <li><img src="img/BOSCH-BFG-2000.png" alt="Перфоратор BOSCH BFG 2000"></li>
+                                   <li><img src="img/BOSCH-BFG-3000.png" alt="Перфоратор BOSCH BFG 3000"></li>
+                                   <li><img src="img/BOSCH-BFG-6000.png" alt="Перфоратор BOSCH BFG 6000"></li>
+                                   <li><img src="img/BOSCH-BFG-2000.png" alt="Перфоратор BOSCH BFG 2000"></li>
+                              </ul>
+                              <div class="products__pagination">
+                                   <button type="button">1</button>
+                                   <button type="button">2</button>
+                                   <button type="button">3</button>
+                                   <button type="button">Следующая</button>
+                              </div>
+                         </div>
+                    </section>
+                    <section class="products__discription">
+                         <h3>Пара слов о перфораторах</h3>
+                         <dl>
+                              <dt>Перфоратор -</dt>
+                              <dd>
+                                   универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+                                   Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+                                   В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+                              </dd>
+                         </dl>
+                    </section>
+               </main>
+
+               <footer class="footer">
+                    <div class="footer__menu">
+                         <a class="footer__logo">ТЕХНОМАРТ</a>
+                         <ul class="footer__menu-list">
+                              <li class="footer__item"><a href="blank.html">Компания</a></li>
+                              <li class="footer__item"><a href="blank.html">Новости</a></li>
+                              <li class="footer__item"><a href="catalog.html">Каталог</a></li>
+                              <li class="footer__item"><a href="blank.html">Доставка</a></li>
+                              <li class="footer__item"><a href="blank.html">Контакты</a></li>
+                         </ul>
+                    </div>
+
+                    <div class="footer__adress">
+                      <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+                      <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+                    </div>
+
+                    <div class="footer__submenu">
+                         <ul class="footer_list">
+                              <li class="footer__item"><a href="blank.html">Материалы</a></li>
+                              <li class="footer__item"><a href="blank.html">Техника</a></li>
+                              <li class="footer__item"><a href="blank.html">Инструмент</a></li>
+                              <li class="footer__item"><a href="blank.html">Спецпредложения</a></li>
+                         </ul>
+                    </div>
+
+                    <div class="footer__contacts">
+                         <div class="rights">
+                              <span>© 2010–2019 Компания «Техномарт»</span>
+                              <span>Все права защищены</span>
+                         </div>
+                         <ul class="footer__social">
+                              <li><img src="icons/vk-icon.svg" alt=""></li>
+                              <li><img src="icons/facebook-icon.svg" alt=""></li>
+                              <li><img src="icons/instagram-icon.svg" alt=""></li>
+                         </ul>
+                         <div class="footer__email">
+                              <span>Обратная связь:</span>
+                              <span>mail@htmlacademy.ru </span>
+                         </div>
+                         <div class="footer__site">
+                              <span>Разработано</span>
+                              <span>htmlacademy.ru </span>
+                         </div>
+                    </div>
+               </footer>
+          </div>
+     </body>
+</html>
