@@ -7,6 +7,8 @@
     <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icons/favicon32x32.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body class="page">
     <div class="wrapper">
@@ -38,16 +40,16 @@
           </div>
 
           <div class="header__block">
-            <h1>Интернет-магазин
+            <h1 class="header__title">Интернет-магазин
               строительных материалов
               и инструментов для ремонта</h1>
 
             <div class="header__contacts">
-              <a>
+              <a class="header__phone" href="tel:+78125550555">
                 <img src="icons/phone-icon.svg" alt="Телефон">
                 <span>+7 (812) 555-05-55</span>
               </a>
-              <span>
+              <span class="header__address">
                 г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
               </span>
             </div>
@@ -64,14 +66,14 @@
           </div>
 
           <nav class="header__menu">
-            <ul>
-              <li><a href="index.html">Главная</a></li>
-              <li><a href="blank.html">Компания</a></li>
-              <li><a href="catalog.html">Каталог</a></li>
-              <li><a href="blank.html">Новости</a></li>
-              <li><a href="blank.html">Спецпредложения</a></li>
-              <li><a href="blank.html">Доставка</a></li>
-              <li><a href="blank.html">Контакты</a></li>
+            <ul class="header__list">
+              <li class="header__item"><a href="index.html">Главная</a></li>
+              <li class="header__item"><a href="blank.html">Компания</a></li>
+              <li class="header__item"><a href="catalog.html">Каталог</a></li>
+              <li class="header__item"><a href="blank.html">Новости</a></li>
+              <li class="header__item"><a href="blank.html">Спецпредложения</a></li>
+              <li class="header__item"><a href="blank.html">Доставка</a></li>
+              <li class="header__item"><a href="blank.html">Контакты</a></li>
             </ul>
           </nav>
         </div>
@@ -79,7 +81,7 @@
       <main class="main">
         <div class="main__container">
           <section class="goods">
-            <div class="goods__block">
+            <div class="goods__products">
               <div class="goods__materials">
                 <h3>Материалы</h3>
                 <a href="catalog.html">На любой вкус</a>
@@ -117,46 +119,65 @@
                 <span>Настоящие мужские игрушки</span>
               </div>
 
-              <a href="catalog.html">Открыть каталог</a>
+              <a href="catalog.html" class="goods__link">Открыть каталог</a>
             </div>
           </section>
 
-          <section class="popular__products">
-            <div class="popular__block">
+          <section class="popular-products">
+            <div class="popular-products__block">
               <h2>Популярные товары:</h2>
               <a href="#">
                 Все популярные товары
               </a>
             </div>
 
-            <ul>
-              <li><img src="img/BOSCH-BFG-9000.png" alt="Перфоратор BOSCH BFG 9000" width="184" height="164"></li>
-              <li><img src="img/BOSCH-BFG-3000.png" alt="Перфоратор BOSCH BFG 3000" width="127" height="112"></li>
-              <li><img src="img/BOSCH-BFG-6000.png" alt="Перфоратор BOSCH BFG 6000" width="144" height="128"></li>
-              <li><img src="img/BOSCH-BFG-2000.png" alt="Перфоратор BOSCH BFG 2000" width="127" height="112"></li>
-            </ul>
+            <ul class="popular-products__list">
+              <li class="popular-products__item">
+                <img src="img/BOSCH-BFG-9000.png" alt="Перфоратор BOSCH BFG 9000" width="184" height="164">
+                <h3>Перфоратор BOSCH BFG 9000</h3>
+                <span class="popular-products__price">32500 Р.</span>
+                <button type="button" class="popular-products__button">25500 Р.</button>
+           </li>
+           <li class="popular-products__item">
+                <img src="img/BOSCH-BFG-3000.png" alt="Перфоратор BOSCH BFG 3000" width="127" height="112">
+                <h3>Перфоратор BOSCH BFG 3000</h3>
+                <span class="popular-products__price">22 500 Р.</span>
+                <button type="button" class="popular-products__button">15500 Р.</button>
+           </li>
+           <li class="popular-products__item">
+                <img src="img/BOSCH-BFG-6000.png" alt="Перфоратор BOSCH BFG 6000" width="144" height="128">
+                <h3>Перфоратор BOSCH BFG 6000</h3>
+                <span class="popular-products__price">30500 Р.</span>
+                <button type="button" class="popular-products__button">25500 Р.</button>
+            </li>
+             <li class="popular-products__item">
+                <img src="img/BOSCH-BFG-2000.png" alt="Перфоратор BOSCH BFG 2000" width="127" height="112">
+                <h3>Перфоратор BOSCH BFG 2000</h3>
+                <span class="popular-products__price">22500 Р.</span>
+                <button type="button" class="popular-products__button">12500 Р.</button>
+            </li>
+          </ul>
           </section>
 
-          <section class="popular__brand">
-            <div class="popular__block">
+          <section class="popular-brands">
+            <div class="popular-brands__block">
               <h2>Популярные производители:</h2>
               <a href="#">
                 Все производители
               </a>
             </div>
 
-            <ul>
-              <li><img src="img/bosch.png" alt="Bosch" width="220" height="112"></li>
-              <li><img src="img/makita.png" alt="Makita" width="123" height="40"></li>
-              <li><img src="img/deWalt.png" alt="DeWalt" width="146" height="44"></li>
-              <li><img src="img/interskol.png" alt="Интерскол" width="200" height="75"></li>
-              <li><img src="img/hitachi.png" alt="Hitachi" width="220" height="145"></li>
-              <li><img src="img/LG.png" alt="LG" width="121" height="73"></li>
-              <li><img src="img/AEG.png" alt="AEG Power Solutions" width="151" height="96"></li>
-              <li><img src="img/metabo.png" alt="Metabo" width="204" height="69"></li>
+            <ul class="popular-brands__list">
+              <li class="popular-brands__item"><img src="img/bosch.png" alt="Bosch" width="126" height="37"></li>
+              <li class="popular-brands__item"><img src="img/makita.png" alt="Makita" width="123" height="40"></li>
+              <li class="popular-brands__item"><img src="img/deWalt.png" alt="DeWalt" width="146" height="44"></li>
+              <li class="popular-brands__item"><img src="img/interskol.png" alt="Интерскол" width="200" height="75"></li>
+              <li class="popular-brands__item"><img src="img/hitachi.png" alt="Hitachi" width="169" height="31"></li>
+              <li class="popular-brands__item"><img src="img/LG.png" alt="LG" width="121" height="73"></li>
+              <li class="popular-brands__item"><img src="img/AEG.png" alt="AEG Power Solutions" width="151" height="96"></li>
+              <li class="popular-brands__item"><img src="img/metabo.png" alt="Metabo" width="204" height="69"></li>
             </ul>
           </section>
-
 
           <section class="services">
             <h2>Сервисы</h2>
@@ -164,10 +185,10 @@
               Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
             </p>
 
-            <ul>
-              <li>Доставка</li>
-              <li>Гарантия</li>
-              <li>Кредит</li>
+            <ul class="services__list">
+              <li class="services__item">Доставка</li>
+              <li class="services__item">Гарантия</li>
+              <li class="services__item">Кредит</li>
             </ul>
 
             <div class="services__description">
@@ -197,14 +218,14 @@
                 Мы можем доставить ваш товар в самые отдаленные точки России!
                 Техномарт работает со многими транспортными компаниями:
               </p>
-              <ul>
-                <li>Деловые линии</li>
-                <li>Автотрейдинг</li>
-                <li>ЖелДорЭкспедиция</li>
+              <ul class="about__list">
+                <li class="about__item">Деловые линии</li>
+                <li class="about__item">Автотрейдинг</li>
+                <li class="about__item">ЖелДорЭкспедиция</li>
               </ul>
-              <a href="#">
+              <a href="#" class="about__link">
                 Подробнее о компании
-              </ф>
+              </a>
             </div>
 
             <div class="about__contacts">
@@ -215,7 +236,7 @@
               <div class="about__map">
                 <!--тут реализация карты-->
               </div>
-              <button>
+              <button type="button" class="about__button">
                 Заблудились? Напишите нам!
               </button>
             </div>
@@ -235,7 +256,7 @@
             </ul>
           </div>
 
-          <div class="footer__adress">
+          <div class="footer__address">
             <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
             <a href="tel:+78125550555">+7 (812) 555-05-55</a>
           </div>
@@ -259,11 +280,11 @@
             </ul>
             <div class="footer__email">
               <span>Обратная связь:</span>
-              <span>mail@htmlacademy.ru </span>
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru </a>
             </div>
             <div class="footer__site">
               <span>Разработано</span>
-              <span>htmlacademy.ru </span>
+              <a href="https://htmlacademy.ru/">htmlacademy.ru </a>
             </div>
           </div>
         </div>
