@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
@@ -10,38 +10,43 @@
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
   </head>
-  <body class="page">
+  <body class="body">
     <header class="header">
-      <div  class="header__container">
-        <div class="header__panel">
-          <a class="header__logo">ТЕХНОМАРТ</a>
+      <div class="header__top">
+        <div class="header__panel container">
+          <a href="index.html" class="header__logo">
+              <img src="icons/logo-icon.svg">
+          </a>
 
-          <form class="search">
+          <form class="header__search">
             <img src="icons/search-icon.svg" alt="Поиск">
-            <label for="search">Поиск</label>
-            <input type="search" name="search" id="search" placeholder="Поиск">
+            <label for="search">Поиск:</label>
+            <input type="search" name="search" id="search">
           </form>
 
-          <a href="#">
+          <a href="#" class="header__bookmarks">
             <img src="icons/bookmark-icon.svg" alt="Закладки">
             <span>Закладки: 0</span>
           </a>
 
-          <a href="#">
-              <img src="icons/shopping-cart-icon.svg" alt="Корзина">
+          <a href="#" class="header__purchase-cart">
+              <img src="icons/purchase-cart-icon.svg" alt="Корзина">
               <span>Корзина: 0</span>
           </a>
 
-          <a href="#">
+          <a href="#" class="header__ordering">
             <span>Оформить заказ</span>
           </a>
-
         </div>
+      </div>
 
-        <div class="header__block">
-          <h1 class="header__title">Интернет-магазин
-            строительных материалов
-            и инструментов для ремонта</h1>
+      <div class="header__bottom">
+        <div class="header__container container">
+          <h1 class="header__title">
+            <span>Интернет-магазин</span>
+            <span>строительных материалов</span>
+            <span>и инструментов для ремонта</span>
+          </h1>
 
           <div class="header__contacts">
             <a class="header__phone" href="tel:+78125550555">
@@ -54,71 +59,82 @@
           </div>
 
           <div class="header__authentication">
-            <a href="#">
+            <a href="#" class="header__login">
               <img src="icons/login-icon.svg" alt="Логин">
               <span>Войти</span>
             </a>
-            <a href="#">
+            <a href="#" class="header__sign-up">
               Регистрация
             </a>
           </div>
-        </div>
 
-        <nav class="header__menu">
-          <ul class="header__list">
-            <li class="header__item"><a href="index.html">Главная</a></li>
-            <li class="header__item"><a href="blank.html">Компания</a></li>
-            <li class="header__item"><a href="catalog.html">Каталог</a></li>
-            <li class="header__item"><a href="blank.html">Новости</a></li>
-            <li class="header__item"><a href="blank.html">Спецпредложения</a></li>
-            <li class="header__item"><a href="blank.html">Доставка</a></li>
-            <li class="header__item"><a href="blank.html">Контакты</a></li>
-          </ul>
-        </nav>
+
+          <nav class="header__menu">
+            <ul class="header__list">
+              <li class="header__item"><a href="index.html">Главная</a></li>
+              <li class="header__item"><a href="blank.html">Компания</a></li>
+              <li class="header__item"><a href="catalog.html">Каталог</a></li>
+              <li class="header__item"><a href="blank.html">Новости</a></li>
+              <li class="header__item"><a href="blank.html">Спецпредложения</a></li>
+              <li class="header__item"><a href="blank.html">Доставка</a></li>
+              <li class="header__item"><a href="blank.html">Контакты</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
+
     <main class="main">
-      <div class="main__container">
+      <div class="main__container container">
         <section class="goods">
           <div class="goods__products">
-            <div class="goods__materials">
+            <div class="goods__materials block">
               <h3>Материалы</h3>
-              <a href="catalog.html">На любой вкус</a>
               <img src="icons/paint-icon.svg" alt="Краска">
+              <a href="catalog.html">На любой вкус</a>
             </div>
 
-            <div class="goods__instruments">
+            <div class="goods__instruments block">
               <h3>Инструмент</h3>
-              <a href="catalog.html">На все случаи</a>
               <img src="icons/drill-icon.svg" alt="Инструмент">
+              <a href="catalog.html">На все случаи</a>
             </div>
 
-            <div class="goods__technics">
+            <div class="goods__technics block">
               <h3>Техника</h3>
-              <a href="catalog.html">Для стройки</a>
               <img src="icons/tractor-icon.svg" alt="Трактор">
+              <a href="catalog.html">Для стройки</a>
             </div>
 
-            <div class="goods__discounts">
+            <div class="goods__preview">
+              <div class="goods__preview-block">
+                <h3>Перфораторы</h3>
+                <span>Настоящие мужские игрушки</span>
+              </div>
+
+              <div class="goods__sliders">
+                <div class="goods__left-slider">
+                  <img src="icons/left-slider-icon.svg" alt="Стрелка влево">
+                </div>
+                <div class="goods__left-right">
+                  <img src="icons/right-slider-icon.svg" alt="Стрелка вправо">
+                </div>
+              </div>
+
+              <a href="catalog.html" class="goods__link">Открыть каталог</a>
+            </div>
+
+            <div class="goods__discounts block">
                 <h3>Скидки 50%</h3>
+                <img src="icons/shopping-cart-icon.svg" alt="Тележка">
                 <a href="catalog.html">На 350 товаров</a>
-                <img src="icons/purchase-cart-icon.svg" alt="Тележка">
             </div>
 
-            <div class="goods__delivery">
+            <div class="goods__delivery block">
               <h3>Доставка</h3>
-              <a href="#">Бесплатно</a>
               <img src="icons/truck-icon.svg" alt="Машина">
+              <a href="#">Бесплатно</a>
             </div>
-          </div>
-
-          <div class="goods__preview">
-            <div class="goods__preview-block">
-              <h3>Перфораторы</h3>
-              <span>Настоящие мужские игрушки</span>
-            </div>
-
-            <a href="catalog.html" class="goods__link">Открыть каталог</a>
           </div>
         </section>
 
@@ -242,7 +258,7 @@
         </section>
       </div>
     </main>
-    <footer class="footer">
+    <footer class="footer container">
       <div class="footer__container">
         <div class="footer__menu">
           <a class="footer__logo">ТЕХНОМАРТ</a>
@@ -255,17 +271,19 @@
           </ul>
         </div>
 
-        <div class="footer__address">
-          <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
-          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-        </div>
+        <div class="footer__block">
+          <div class="footer__address">
+            <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+            <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+          </div>
 
-        <ul class="footer__submenu">
-          <li class="footer__item"><a href="blank.html">Материалы</a></li>
-          <li class="footer__item"><a href="blank.html">Техника</a></li>
-          <li class="footer__item"><a href="blank.html">Инструмент</a></li>
-          <li class="footer__item"><a href="blank.html">Спецпредложения</a></li>
-        </ul>
+          <ul class="footer__submenu">
+            <li class="footer__item"><a href="blank.html">Материалы</a></li>
+            <li class="footer__item"><a href="blank.html">Техника</a></li>
+            <li class="footer__item"><a href="blank.html">Инструмент</a></li>
+            <li class="footer__item"><a href="blank.html">Спецпредложения</a></li>
+          </ul>
+        </div>
 
         <div class="footer__contacts">
           <div class="footer__rights">
