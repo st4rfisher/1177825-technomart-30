@@ -7,15 +7,15 @@
     <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icons/favicon32x32.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body class="body">
     <header class="header">
       <div class="header__top">
         <div class="header__panel container">
           <a href="index.html" class="header__logo">
-            <span class="visually-hidden">Логотип "Техномарт"</span>
+            <span class="visually-hidden">Логотип Техномарт</span>
           </a>
 
           <form class="header__search">
@@ -50,7 +50,7 @@
 
       <div class="header__bottom">
         <div class="header__container container">
-          <h1 class="header__title">
+          <h1 class="header__title" tabindex="0">
             Интернет-магазин
             <br>
             строительных материалов
@@ -99,54 +99,50 @@
       <div class="main__top-container container">
         <section class="goods">
           <div class="goods__products">
-            <div class="goods__materials block">
+            <div class="goods__materials goods__block goods__block_new" aria-label="Материалы" tabindex="0">
               <h3>Материалы</h3>
-              <img src="icons/paint-icon.svg" alt="Краска">
               <a class="goods__link" href="#"><span>На любой вкус</span></a>
             </div>
 
-            <div class="goods__instruments block">
+            <div class="goods__instruments goods__block" aria-label="Инструмент" tabindex="0">
               <h3>Инструмент</h3>
-              <img src="icons/drill-icon.svg" alt="Инструмент">
               <a class="goods__link" href="catalog.html"><span>На все случаи</span></a>
             </div>
 
-            <div class="goods__technics block">
+            <div class="goods__technics goods__block" aria-label="Техника" tabindex="0">
               <h3>Техника</h3>
-              <img src="icons/tractor-icon.svg" alt="Трактор">
               <a class="goods__link" href="#"><span>Для стройки</span></a>
             </div>
 
             <div class="goods__preview">
+              <img class="goods__preview-image" src="img/hero.png" alt="">
               <div class="goods__preview-block">
                 <h3>Перфораторы</h3>
                 <span>Настоящие мужские игрушки</span>
               </div>
 
+
               <div class="goods__sliders">
                 <div class="goods__left-slider">
-                  <img src="icons/left-slider-icon.svg" alt="Стрелка влево">
                 </div>
-                <div class="goods__left-right">
-                  <img src="icons/right-slider-icon.svg" alt="Стрелка вправо">
+                <div class="goods__right-slider">
                 </div>
               </div>
 
               <a href="catalog.html" class="goods__preview-link active"><span>Открыть каталог</span></a>
-              <div class="goods__slides-switches">
-
+              <div class="goods__slides-controls">
+                <div class="goods__control"></div>
+                <div class="goods__control goods__control_active"></div>
               </div>
             </div>
 
-            <div class="goods__discounts block">
-                <h3>Скидки 50%</h3>
-                <img src="icons/shopping-cart-icon.svg" alt="Тележка">
+            <div class="goods__discounts goods__block" aria-label="Скидки 50%" tabindex="0">
+                <h3>Скидки 50% </h3>
                 <a class="goods__link" href="#"><span>На 350 товаров</span></a>
             </div>
 
-            <div class="goods__delivery block">
+            <div class="goods__delivery goods__block" aria-label="Доставка" tabindex="0">
               <h3>Доставка</h3>
-              <img src="icons/truck-icon.svg" alt="Машина">
               <a class="goods__link" href="#"><span>Бесплатно</span></a>
             </div>
           </div>
@@ -154,9 +150,9 @@
 
         <section class="popular-products">
           <div class="popular-products__block">
-            <h2>Популярные товары:</h2>
+            <h2>Популярные товары: </h2>
             <a href="#" class="popular-products__link active">
-              Все популярные товары
+              <span>Все популярные товары</span>
             </a>
           </div>
 
@@ -168,43 +164,44 @@
                   <img src="icons/purchase-cart-icon.svg" alt="Тележка">
                   <span>Купить</span>
                 </button>
-                <a href="#" class="popular-products__bookmarks">В закладки</a>
+                <a href="#" class="popular-products__bookmarks"><span>В закладки  </span></a>
               </div>
               <div class="popular-products__item-info">
                 <h3>Перфоратор BOSCH BFG 9000</h3>
-                <span>32500 Р.</span>
+                <span class="popular-products__item-price">32500 Р.</span>
                 <button type="button" class="popular-products__item-button active">25500 Р.</button>
               </div>
             </li>
 
             <li class="popular-products__item popular-products__item_new">
-              <img class="popular-products__item-image" src="img/BOSCH-BFG-3000.png" alt="Перфоратор BOSCH BFG 9000" width="184" height="112">
+              <img class="popular-products__item-image" src="img/BOSCH-BFG-3000.png" alt="Перфоратор BOSCH BFG 3000" width="184" height="112">
               <div class="popular-products__item-block">
                 <button type="button" class="popular-products__purchase-button">
                   <img src="icons/purchase-cart-icon.svg" alt="Тележка">
                   <span>Купить</span>
                 </button>
-                <a href="#" class="popular-products__bookmarks">В закладки</a>
+                <a href="#" class="popular-products__bookmarks"><span>В закладки</span></a>
               </div>
               <div class="popular-products__item-info">
                 <h3>Перфоратор BOSCH BFG 3000</h3>
-                <span>22500 Р.</span>
+                <span class="popular-products__item-price">22500 Р.</span>
                 <button type="button" class="popular-products__item-button active">15500 Р.</button>
               </div>
             </li>
 
             <li class="popular-products__item">
-              <img class="popular-products__item-image" src="img/BOSCH-BFG-6000.png" alt="Перфоратор BOSCH BFG 9000" width="184" height="112">
+              <img class="popular-products__item-image" src="img/BOSCH-BFG-6000.png" alt="Перфоратор BOSCH BFG 6000" width="184" height="112">
               <div class="popular-products__item-block">
                 <button type="button" class="popular-products__purchase-button">
                   <img src="icons/purchase-cart-icon.svg" alt="Тележка">
                   <span>Купить</span>
                 </button>
-                <a href="#" class="popular-products__bookmarks">В закладки</a>
+
+                <a href="#" class="popular-products__bookmarks"><span>В закладки</span></a>
               </div>
               <div class="popular-products__item-info">
                 <h3>Перфоратор BOSCH BFG 6000</h3>
-                <span>30500 Р.</span>
+                <span class="popular-products__item-price">30500 Р.</span>
                 <button type="button" class="popular-products__item-button active">25500 Р.</button>
               </div>
             </li>
@@ -216,11 +213,11 @@
                   <img src="icons/purchase-cart-icon.svg" alt="Тележка">
                   <span>Купить</span>
                 </button>
-                <a href="#" class="popular-products__bookmarks">В закладки</a>
+                <a href="#" class="popular-products__bookmarks"><span>В закладки</span></a>
               </div>
               <div class="popular-products__item-info">
                 <h3>Перфоратор BOSCH BFG 2000</h3>
-                <span>22500 Р.</span>
+                <span class="popular-products__item-price">22500 Р.</span>
                 <button type="button" class="popular-products__item-button active">12500 Р.</button>
               </div>
             </li>
@@ -231,7 +228,7 @@
           <div class="popular-brands__block">
             <h2>Популярные производители:</h2>
             <a href="#" class="popular-brands__link active">
-              Все производители
+              <span>Все производители</span>
             </a>
           </div>
 
@@ -250,21 +247,23 @@
       <div class="main__middle-container">
         <section class="services container">
           <h2>Сервисы</h2>
-          <p class="services__top-text">
-            Хороший интернет-магазин отличается от плохого не только ценами!
-            <br>
-            Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-          </p>
+          <div class="services__text-block">
+            <p class="services__paragraph">
+              Хороший интернет-магазин отличается от плохого не только ценами!
+              <br>
+              Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
+            </p>
+          </div>
 
           <ul class="services__list">
             <li class="services__item">Доставка</li>
             <li class="services__item">Гарантия</li>
             <li class="services__item">Кредит</li>
-            <div class="services__drop-shadow"></div>
           </ul>
 
           <div class="services__description">
             <div class="services__delivery services__show-block">
+              <div class="services__drop-shadow"></div>
               <h3 class="services__heading">
                 Доставка
               </h3>
@@ -277,6 +276,7 @@
                 <br>
                 поднимая его на ваш этаж!
               </p>
+
 
               <img src="img/delivery-image.svg" alt="Изображение грузовика">
             </div>
@@ -352,31 +352,6 @@
             <button type="button" class="about__button active">
               Заблудились? Напишите нам!
             </button>
-            <div class="about__modal-window">
-              <button class="about__close-button"></button>
-              <form class="about__modal-form" method="get" action="https://echo.htmlacademy.ru">
-                <div class="about__modal-form-top">
-                  <label class="about__label-name">
-                    Выше имя:
-                    <input type="text" name="modal-name" placeholder="Имя Фамилия" required>
-                  </label>
-                  <label class="about__label-email">
-                    Ваш e-mail:
-                    <input type="email" name="modal-email" placeholder="email@example.com" required>
-                  </label>
-                  <label for="modal-textarea" class="about__label-textarea">
-                    Текст письма:
-                  </label>
-                  <textarea class="about__textarea" name="modal-textarea" id="modal-text" placeholder="В свободной форме">
-                  </textarea>
-                </div>
-                <div class="about__modal-form-bottom">
-                  <button type="submit" class="about__modal-form-button active" >
-                    Отправить
-                  </button>
-                </div>
-              </form>
-            </div>
           </div>
         </section>
       </div>
@@ -384,15 +359,14 @@
     <footer class="footer">
       <div class="footer__container container">
         <div class="footer__menu">
-          <a href="index.html" class="footer__logo">
-            <img src="icons/logo-icon.svg">
-          </a>
+          <a href="index.html" class="footer__logo"></a>
           <ul class="footer__menu-list">
             <li class="footer__item"><a href="blank.html">Компания</a></li>
             <li class="footer__item"><a href="blank.html">Новости</a></li>
             <li class="footer__item"><a href="catalog.html">Каталог</a></li>
             <li class="footer__item"><a href="blank.html">Доставка</a></li>
             <li class="footer__item"><a href="blank.html">Контакты</a></li>
+
           </ul>
         </div>
 
@@ -411,12 +385,13 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <div class="footer__contacts container">
+        <div class="footer__bottom-block container">
 
           <div class="footer__rights">
             <span>© 2010–2019 Компания «Техномарт»</span>
             <span>Все права защищены</span>
           </div>
+
           <ul class="footer__social">
             <li class="footer__social-item">
               <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -437,16 +412,45 @@
               </svg>
             </li>
           </ul>
-          <div class="footer__email">
-            <span>Обратная связь:</span>
-            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru </a>
-          </div>
-          <div class="footer__site">
-            <span>Разработано</span>
-            <a href="https://htmlacademy.ru/">htmlacademy.ru </a>
+          <div class="footer__contacts">
+            <div class="footer__email">
+              <span>Обратная связь:</span>
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru </a>
+            </div>
+            <div class="footer__site">
+              <span>Разработано &ndash;</span>
+              <a href="https://htmlacademy.ru/">htmlacademy.ru </a>
+            </div>
           </div>
         </div>
       </div>
     </footer>
+
+    <div class="modal-window">
+      <button class="modal-window__close-button"></button>
+      <form class="modal-form" method="get" action="https://echo.htmlacademy.ru">
+        <div class="modal-form__top">
+          <label class="modal-form__label-name">
+            Выше имя:
+            <input type="text" name="modal-name" placeholder="Имя Фамилия" required>
+          </label>
+          <label class="modal-form__label-email">
+            Ваш e-mail:
+            <input type="email" name="modal-email" placeholder="email@example.com" required>
+          </label>
+          <label for="modal-textarea" class="modal-form__label-textarea">
+            Текст письма:
+          </label>
+          <textarea class="modal-form__textarea" name="modal-textarea" id="modal-text" placeholder="В свободной форме">
+          </textarea>
+        </div>
+        <div class="modal-form__bottom">
+          <button type="submit" class="modal-form__button active" >
+            Отправить
+          </button>
+        </div>
+      </form>
+    </div>
+
   </body>
 </html>
