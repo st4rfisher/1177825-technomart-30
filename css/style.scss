@@ -1389,10 +1389,10 @@
     row-gap: 12px;
     @include paragraph-2;
     list-style: none;
-    margin: 0px 0 20px 37px;
-    padding: 0;
+    margin: 0;
+    padding: 0px 0 20px 37px;
     max-width: 550px;
-    overflow: hidden;
+    overflow: hidden;position: relative;
   }
 
   &__item {
@@ -1402,10 +1402,11 @@
   &__item::before {
     content: '';
     position: absolute;
-    width: 23px;
-    border: 1px solid var(--red-light);
+    width: 25px;
+    height: 3px;
+    background-color: var(--red-light);
     left: -37px;
-    top: 12px;
+    top: 11px;
   }
 
   &__link {
