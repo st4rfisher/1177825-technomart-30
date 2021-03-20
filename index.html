@@ -7,8 +7,8 @@
     <link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="icons/favicon32x32.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body class="body">
     <header class="header">
@@ -39,7 +39,8 @@
               <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
               <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
             </svg>
-            <span>Корзина: 0</span>
+            <span>Корзина:</span>
+            <span class="header__purchase-cart-counter">0</span>
           </a>
 
           <a href="#" class="header__ordering">
@@ -60,6 +61,10 @@
 
           <div class="header__contacts">
             <a class="header__phone" href="tel:+78125550555">
+              <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.572 18.985H14.631C10.502 18.497 7.474 16.577 5.272 14.121C3.062 11.66 1.318 8.49202 0.977997 4.22802V3.08402C1.056 2.31002 1.437 1.78002 1.876 1.32702C2.425 0.76602 3.25 0.0440198 4.002 0.0190198C4.556 0.00101977 5.502 0.39902 5.881 0.91802C6.21 1.36402 6.385 2.25702 6.537 2.92102C6.691 3.59202 7.042 4.56402 6.945 5.21002C6.797 6.21702 5.458 6.64402 5.066 7.37602C6.373 10.511 8.509 12.815 11.359 14.407C12.074 14.015 12.705 12.835 13.691 12.812C14.05 12.803 14.509 12.99 14.875 13.098C15.277 13.219 15.625 13.373 15.979 13.506C16.575 13.73 17.627 14.027 17.983 14.527C18.348 15.04 18.553 15.883 18.473 16.406C18.309 17.447 16.594 18.603 15.572 18.985Z" fill="#B7BFC8"/>
+              </svg>
+
               <span>+7 (812) 555-05-55</span>
             </a>
             <span class="header__address">
@@ -132,9 +137,9 @@
               </div>
 
               <div class="goods__sliders">
-                <div class="goods__left-slider" tabindex="0" aria-label="Кнопка прокрутки галереи влево" onclick="previousSlide()">
+                <div class="goods__left-slider" onclick="previousSlide()">
                 </div>
-              <div class="goods__right-slider" tabindex="0" aria-label="Кнопка прокрутки галереи вправо" onclick="nextSlide()">
+              <div class="goods__right-slider" onclick="nextSlide()">
                 </div>
               </div>
 
@@ -170,7 +175,14 @@
               <img class="popular-products__item-image" src="img/BOSCH-BFG-9000.png" alt="Перфоратор BOSCH BFG 9000" width="184" height="112">
               <div class="popular-products__item-block">
                 <button type="button" class="popular-products__purchase-button">
-                  <img src="icons/purchase-cart-icon.svg" alt="Тележка">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.3">
+                      <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
+                      <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
+                      <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
+                    </g>
+                  </svg>
+
                   <span>Купить</span>
                 </button>
                 <a href="#" class="popular-products__bookmarks"><span>В закладки  </span></a>
@@ -186,7 +198,14 @@
               <img class="popular-products__item-image" src="img/BOSCH-BFG-3000.png" alt="Перфоратор BOSCH BFG 3000" width="184" height="112">
               <div class="popular-products__item-block">
                 <button type="button" class="popular-products__purchase-button">
-                  <img src="icons/purchase-cart-icon.svg" alt="Тележка">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.3">
+                      <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
+                      <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
+                      <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
+                    </g>
+                  </svg>
+
                   <span>Купить</span>
                 </button>
                 <a href="#" class="popular-products__bookmarks"><span>В закладки</span></a>
@@ -202,7 +221,14 @@
               <img class="popular-products__item-image" src="img/BOSCH-BFG-6000.png" alt="Перфоратор BOSCH BFG 6000" width="184" height="112">
               <div class="popular-products__item-block">
                 <button type="button" class="popular-products__purchase-button">
-                  <img src="icons/purchase-cart-icon.svg" alt="Тележка">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.3">
+                      <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
+                      <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
+                      <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
+                    </g>
+                  </svg>
+
                   <span>Купить</span>
                 </button>
 
@@ -219,7 +245,14 @@
               <img class="popular-products__item-image" src="img/BOSCH-BFG-2000.png" alt="Перфоратор BOSCH BFG 2000" width="184" height="112">
               <div class="popular-products__item-block">
                 <button type="button" class="popular-products__purchase-button">
-                  <img src="icons/purchase-cart-icon.svg" alt="Тележка">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g opacity="0.3">
+                      <path d="M4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15Z" fill="white"/>
+                      <path d="M12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="white"/>
+                      <path d="M15 2H4.07L3.648 0H0V2H2.031L4.016 11H15V9H9.441L15 6.951V2Z" fill="white"/>
+                    </g>
+                  </svg>
+
                   <span>Купить</span>
                 </button>
                 <a href="#" class="popular-products__bookmarks"><span>В закладки</span></a>
@@ -297,13 +330,13 @@
           </div>
 
           <ul class="services__list">
-            <li class="services__item" tabindex="0" aria-label="Доставка">Доставка</li>
+            <li class="services__item services__item_active" tabindex="0" aria-label="Доставка">Доставка</li>
             <li class="services__item" tabindex="0" aria-label="Гарантия">Гарантия</li>
             <li class="services__item" tabindex="0" aria-label="Кредит">Кредит</li>
           </ul>
 
           <div class="services__description">
-            <div class="services__delivery services__show-block">
+            <div class="services__delivery services__description-item">
               <div class="services__drop-shadow"></div>
               <h3 class="services__heading">
                 Доставка
@@ -318,10 +351,11 @@
                   поднимая его на ваш этаж!
               </p>
 
-
-              <img src="img/delivery-image.svg" alt="Изображение грузовика">
+              <img src="img/delivery-image.svg" width="468" height="261" alt="Изображение грузовика">
             </div>
-            <div class="services__guarantee">
+
+            <div class="services__guarantee services__description-item">
+              <div class="services__drop-shadow"></div>
               <h3 class="services__heading">
                 Гарантия
               </h3>
@@ -336,9 +370,10 @@
                 <br>
                 Дом уж восстановите как-нибудь сами.
               </p>
-              <img src="img/guarantee-image.svg" alt="Значок гарантии">
+              <img src="img/guarantee-image.svg" width="389" height="283" alt="Значок гарантии">
             </div>
-            <div class="services__credit">
+            <div class="services__credit services__description-item">
+              <div class="services__drop-shadow"></div>
               <h3>
                 Кредит
               </h3>
@@ -350,7 +385,7 @@
               <a href="#" class="services__credit-link active">
                 Отправить заявку
               </a>
-              <img src="img/credit-image.svg" alt="Значок кредита">
+              <img src="img/credit-image.svg" width="465" height="285" alt="Значок кредита">
             </div>
           </div>
         </section>
@@ -388,13 +423,13 @@
               заехав в наш офис:
             </p>
 
-            <button class="about__map-button" href="#">
-              <img src="/img/map.png" alt="">
-            </button>
+            <a class="about__map-button" href="blank.html" >
+              <img src="img/map.png"  width="300" height="158" alt="Мини-карта">
+            </a>
 
-            <button type="button" class="about__button active">
+            <a class="about__button active">
               Заблудились? Напишите нам!
-            </button>
+            </a>
           </div>
         </section>
       </div>
@@ -476,7 +511,7 @@
       </div>
     </footer>
 
-    <div class="modal-form-window" tabindex="0" aria-label="Форма отправки письма">
+    <div class="modal-form-window" aria-label="Форма отправки письма">
       <button class="modal-form-window__close-button" aria-label="Закрыть форму"></button>
       <form class="modal-form" method="get" action="https://echo.htmlacademy.ru">
         <div class="modal-form__top">
@@ -491,7 +526,7 @@
           <label for="modal-textarea" class="modal-form__label-textarea">
             Текст письма:
           </label>
-          <textarea class="modal-form__textarea" name="modal-textarea" id="modal-text" placeholder="В свободной форме">
+          <textarea class="modal-form__textarea" name="modal-textarea" id="modal-textarea" placeholder="В свободной форме">
           </textarea>
         </div>
         <div class="modal-form__bottom">
@@ -518,12 +553,17 @@
     </div>
 
     <div class="modal-map">
-      <button class="modal-map__close-button" type="button"></button>
-      <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="943" height="449" allowfullscreen title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"> -->
+      <button class="modal-map__close-button" type="button">
+      </button>
+      <a class="modal-map__link" href="https://www.google.ru/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9387192,30.3208587,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474" target="_blank">
+        <img src="img/full-map.png" width="943" height="442" alt="Карта">
+      </a>
     </div>
 
-    <script src="/js/modalMap.js"></script>
-    <script src="/js/modalForm.js"></script>
-
+    <script src="js/modalMap.js"></script>
+    <script src="js/modalForm.js"></script>
+    <script src="js/servicesSlider.js"></script>
+    <script src="js/previewSlider.js"></script>
+    <script src="js/addingWindow.js"></script>
   </body>
 </html>

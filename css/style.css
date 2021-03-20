@@ -124,20 +124,22 @@
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 42px 278px;
-      grid-template-rows: 42px 278px;
-  font-family: Cuprum;
+  -ms-grid-rows: min-content min-content;
+      grid-template-rows: -webkit-min-content -webkit-min-content;
+      grid-template-rows: min-content min-content;
+  font-family: Cuprum, Arial, Tahoma, serif;
 }
 
 .header__container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
-  -ms-grid-rows: 158px 60px;
-      grid-template-rows: 158px 60px;
-  -webkit-column-gap: 20px;
-          column-gap: 20px;
+  -ms-grid-columns: 258px auto auto;
+      grid-template-columns: 258px auto auto;
+  -ms-grid-rows: min-content min-content;
+      grid-template-rows: -webkit-min-content -webkit-min-content;
+      grid-template-rows: min-content min-content;
+  -webkit-column-gap: 34px;
+          column-gap: 34px;
 }
 
 .header__top {
@@ -249,7 +251,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 9px 23px 9px 20px;
+  padding: 9px 39px;
   max-width: 250px;
   overflow: hidden;
 }
@@ -279,7 +281,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 9px 27px 9px 27px;
+  padding: 9px 17px 9px 11px;
   max-width: 250px;
   overflow: hidden;
 }
@@ -297,6 +299,10 @@
 
 .header__purchase-cart:hover .header__purchase-cart-icon {
   opacity: 1;
+}
+
+.header__purchase-cart-counter {
+  margin: 0 10px 0 4px;
 }
 
 .header__ordering {
@@ -327,11 +333,12 @@
 
 .header__bottom {
   background-color: var(--grey-ultra-light);
+  padding-bottom: 60px;
 }
 
 .header__title {
   margin: 0;
-  padding: 45px 30px 45px 30px;
+  padding: 44px 30px 45px 30px;
   max-width: 370px;
   max-height: 158px;
   overflow: hidden;
@@ -356,37 +363,51 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 21px 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 14px;
   max-height: 158px;
   overflow: hidden;
 }
 
 .header__phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
   font-weight: 700;
   font-style: normal;
   font-size: 21px;
   line-height: 30px;
-  background-image: url("../icons/phone-icon.svg");
-  background-repeat: no-repeat;
-  background-position: 36px 10px;
   color: var(--red-light);
-  margin: 11px 0px 3px -4px;
-  padding: 5px 43px 4px 50px;
-  border: 3px solid var(--white);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin: 5px 0px 3px 14px;
+  padding: 3px 0px 3px 0px;
+  min-width: 270px;
+  min-height: 45px;
+  border: 3px solid var(--white);
 }
 
 .header__phone span {
-  margin-left: 20px;
+  margin-left: 27px;
+}
+
+.header__phone svg {
+  position: absolute;
+  left: 35px;
+  top: 11px;
 }
 
 .header__address {
   font-size: 14px;
   line-height: 24px;
   color: var(--indigo);
-  margin: 0 5px 5px 0;
   max-width: 321px;
+  margin-left: 13px;
 }
 
 .header__authentication {
@@ -404,6 +425,7 @@
   -ms-grid-row-align: center;
       align-self: center;
   margin-bottom: 22px;
+  margin-left: 34px;
   max-height: 120px;
   overflow: hidden;
 }
@@ -493,14 +515,45 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 0;
 }
 
 .header__user {
-  margin-top: 5px;
-  padding: 12px 15px 12px 15px;
+  min-width: 299px;
+  min-height: 45px;
+  margin: 5px 0 0 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 13px 9px 11px 15px;
   background-color: var(--white);
   font-size: 21px;
   line-height: 21px;
+}
+
+.header__user-link:hover .header__user-icon path {
+  fill: var(--indigo-light);
+}
+
+.header__user-link:visited {
+  color: var(--black);
+}
+
+.header__user-link:focus {
+  color: var(--grey-light);
+}
+
+.header__user-link:focus .header__user-icon path {
+  fill: var(--grey-light);
+}
+
+.header__logout:hover .header__logout-icon path {
+  fill: var(--indigo-light);
+}
+
+.header__logout:focus .header__logout-icon path {
+  fill: var(--grey-light);
 }
 
 .header__user-name {
@@ -514,7 +567,7 @@
   gap: 33px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-top: 7px;
+  margin: 8px 0 0 17px;
 }
 
 .header__user-panel a {
@@ -533,6 +586,18 @@
   border-radius: 50%;
 }
 
+.header__user-orders:hover, .header__personal-area:hover {
+  color: var(--red-light);
+}
+
+.header__user-orders:hover, .header__personal-area:hover {
+  color: var(--red-light);
+}
+
+.header__user-orders:focus, .header__personal-area:focus {
+  color: var(--grey-light);
+}
+
 .header__menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -547,6 +612,7 @@
   -webkit-box-shadow: inset 0px -5px 0px var(--indigo-shadow);
           box-shadow: inset 0px -5px 0px var(--indigo-shadow);
   overflow: hidden;
+  min-height: 60px;
 }
 
 .header__list {
@@ -579,11 +645,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: inherit;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 28px;
-  max-height: 60px;
+  min-height: 60px;
   max-width: 190px;
   overflow: hidden;
 }
@@ -593,8 +655,11 @@
   font-size: 18px;
   line-height: 24px;
   color: var(--white);
-  max-height: 60px;
+  min-height: 60px;
   max-width: 190px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 16px 28px 20px 28px;
 }
 
 .header__item:hover {
@@ -607,8 +672,12 @@
   color: var(--black);
 }
 
+.header__item-link span {
+  max-width: 170px;
+}
+
 .goods {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   color: var(--white);
   display: -ms-grid;
   display: grid;
@@ -690,7 +759,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -705,13 +774,13 @@
 }
 
 .goods__block_new::before {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  content: 'New';
+  content: "New";
   position: absolute;
   top: 15px;
   right: 12px;
@@ -723,7 +792,7 @@
 }
 
 .goods__block_new::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   right: 0px;
@@ -828,7 +897,7 @@
 
 .goods__preview-block h3 {
   margin: 0;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -840,7 +909,7 @@
 
 .goods__preview-block span {
   margin-top: 6px;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -882,7 +951,7 @@
 .goods__preview-link {
   position: absolute;
   bottom: 0;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -955,7 +1024,7 @@
   -ms-grid-rows: min-content 1fr;
       grid-template-rows: -webkit-min-content 1fr;
       grid-template-rows: min-content 1fr;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-weight: bold;
   margin-top: 59px;
 }
@@ -971,7 +1040,7 @@
       -ms-flex-align: center;
           align-items: center;
   background-color: var(--cream);
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-weight: normal;
   text-transform: uppercase;
   padding: 25px 14px 26px 28px;
@@ -980,7 +1049,7 @@
 }
 
 .popular-products__block h2 {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -997,7 +1066,7 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1049,7 +1118,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -1100,13 +1169,13 @@
 }
 
 .popular-products__item_new::before {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  content: 'New';
+  content: "New";
   position: absolute;
   top: 15px;
   right: 12px;
@@ -1118,7 +1187,7 @@
 }
 
 .popular-products__item_new::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   right: 0px;
@@ -1253,7 +1322,7 @@
 }
 
 .popular-products__purchase-button span {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1263,7 +1332,7 @@
   margin: 10px 0 10px 0;
 }
 
-.popular-products__purchase-button img {
+.popular-products__purchase-button svg {
   margin: 0 8px 3px 0;
 }
 
@@ -1286,7 +1355,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1303,7 +1372,7 @@
 
 .popular-products__bookmarks span {
   color: var(--indigo);
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1327,7 +1396,7 @@
       grid-template-columns: 1fr;
   -ms-grid-rows: 89px 1fr;
       grid-template-rows: 89px 1fr;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   text-transform: uppercase;
   color: var(--indigo);
   margin-top: 70px;
@@ -1336,7 +1405,7 @@
 
 .popular-brands h2 {
   margin: 0;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -1361,7 +1430,7 @@
 }
 
 .popular-brands__link {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1450,7 +1519,7 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1 / 2;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -1475,7 +1544,7 @@
 
 .services__paragraph {
   margin: 0;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -1503,7 +1572,7 @@
           align-items: center;
   background-color: var(--indigo);
   list-style: none;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -1519,7 +1588,7 @@
   overflow: hidden;
 }
 
-.services__item:hover {
+.services__item_active {
   cursor: pointer;
   border-top: 2px solid var(--white);
   border-bottom: 2px solid var(--white);
@@ -1555,7 +1624,7 @@
 
 .services__description h3 {
   margin: 0;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -1574,38 +1643,38 @@
 }
 
 .services__delivery-text {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
   margin: 29px 0 0 0;
   line-height: 25px;
-  max-width: 280px;
+  max-width: 330px;
   overflow: hidden;
 }
 
 .services__guarantee-text {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
   margin: 27px 0 0 0;
   line-height: 25px;
-  max-width: 280px;
+  max-width: 330px;
   overflow: hidden;
 }
 
 .services__credit-text {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 24px;
   margin: 29px 0 0 0;
   line-height: 25px;
-  max-width: 280px;
+  max-width: 330px;
   overflow: hidden;
 }
 
@@ -1623,7 +1692,7 @@
 }
 
 .services__credit-link {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1662,7 +1731,7 @@
 
 .about__description h2 {
   margin: 0;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -1675,7 +1744,7 @@
 .about__description p {
   margin-top: 24px;
   margin-bottom: 0;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -1697,7 +1766,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 12px;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -1715,7 +1784,7 @@
 }
 
 .about__item::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 25px;
   height: 3px;
@@ -1725,7 +1794,7 @@
 }
 
 .about__link {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1757,7 +1826,7 @@
 
 .about__contacts h2 {
   margin: 0;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -1769,7 +1838,7 @@
 
 .about__contacts p {
   margin-top: 23px;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -1779,18 +1848,19 @@
 }
 
 .about__map-button {
+  display: block;
   width: 300px;
   height: 158px;
   padding: 0;
   border: none;
   outline: none;
   background-color: var(--grey-soft);
-  margin: 21px 0 25px 0;
+  margin: 34px 0 25px 0;
   cursor: pointer;
 }
 
 .about__button {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1813,8 +1883,6 @@
           box-sizing: border-box;
   padding: 11px 20px 9px 20px;
   cursor: pointer;
-  min-width: 300px;
-  max-width: 470px;
   overflow: hidden;
 }
 
@@ -1873,7 +1941,7 @@
 }
 
 .footer__menu-list a {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -1911,7 +1979,7 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   min-width: 220px;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -1940,7 +2008,7 @@
 }
 
 .footer__submenu a {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -1980,7 +2048,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -2029,7 +2097,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -2057,8 +2125,10 @@
   position: absolute;
   width: 620px;
   height: 430px;
-  bottom: 352px;
-  right: 530px;
+  bottom: 355px;
+  left: 50%;
+  -webkit-transform: translateX(-52%);
+          transform: translateX(-52%);
   background-color: var(--white);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2098,7 +2168,7 @@
 }
 
 .modal-form__top label {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -2108,7 +2178,7 @@
 .modal-form__top input,
 .modal-form__top textarea {
   margin-top: 11px;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -2186,7 +2256,7 @@
 
 .modal-form__button {
   width: 100%;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -2215,7 +2285,9 @@
   width: 943px;
   height: 449px;
   bottom: 336px;
-  right: 366px;
+  left: 51%;
+  -webkit-transform: translateX(-52%);
+          transform: translateX(-52%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-top: 7px solid var(--red-light);
@@ -2234,19 +2306,17 @@
   outline: none;
   border: none;
   cursor: pointer;
-}
-
-.modal-map iframe {
-  width: 943px;
-  height: 449px;
+  z-index: 1;
 }
 
 /*===================catalog.html===================*/
 .modal-adding-window {
   display: none;
   position: absolute;
-  top: 29%;
-  left: 537px;
+  top: 655px;
+  left: 51%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 620px;
   height: 283px;
   -webkit-box-sizing: border-box;
@@ -2272,7 +2342,7 @@
 }
 
 .modal-adding-window__top {
-  height: 170px;
+  height: 163px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2290,7 +2360,7 @@
 }
 
 .modal-adding-window__top span {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -2310,13 +2380,13 @@
       -ms-flex-pack: center;
           justify-content: center;
   background-color: var(--grey-modal);
-  gap: 10px;
+  gap: 12px;
 }
 
 .modal-adding-window__order-button {
   min-width: 192px;
   min-height: 38px;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -2350,7 +2420,7 @@
           align-items: center;
   min-width: 192px;
   min-height: 38px;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -2474,7 +2544,7 @@
 }
 
 .catalog-page__catalog {
-  margin-bottom: 39px;
+  margin-bottom: 38px;
 }
 
 .catalog-page__breadcrumbs {
@@ -2503,7 +2573,7 @@
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -2535,7 +2605,7 @@
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / 3;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -2562,7 +2632,7 @@
 }
 
 .catalog-page__filters legend {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -2576,7 +2646,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10px 0 10px 18px;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -2656,7 +2726,7 @@
   border-radius: 5px;
   background: #f1f1f1;
   font-size: inherit;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   background-color: var(--grey-soft-light);
   border-radius: 5px;
   outline: none;
@@ -2683,7 +2753,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -2742,7 +2812,7 @@
 .catalog-page__power-filters {
   margin: 0;
   padding-left: 35px;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -2802,7 +2872,7 @@
 }
 
 .catalog-page__filters-button {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -2850,7 +2920,7 @@
 .catalog-page__filters-block span {
   -ms-grid-columns: 1 / 2;
       grid-template-columns: 1 / 2;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -2875,28 +2945,31 @@
 }
 
 .catalog-page__filter-item {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
-  color: var(--red);
   max-width: 570px;
   overflow: hidden;
 }
 
 .catalog-page__filter-item a {
+  color: var(--black);
   border-bottom: 1px dotted var(--red-light);
 }
 
 .catalog-page__filter-item a:hover {
-  color: var(--black);
   border-bottom: 1px solid var(--red-light);
 }
 
+.catalog-page__filter-item span {
+  opacity: 0.3;
+}
+
 .catalog-page__filter-item_active {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -2905,8 +2978,12 @@
 }
 
 .catalog-page__filter-item_active a {
-  color: var(--red-light);
   border: none;
+}
+
+.catalog-page__filter-item_active span {
+  opacity: 1;
+  color: var(--red-light);
 }
 
 .catalog-page__filter-item_active .catalog-page__filter-item-icon {
@@ -2922,6 +2999,11 @@
   color: var(--red-light);
 }
 
+.catalog-page__filter-item:hover span {
+  opacity: 1;
+  color: var(--black);
+}
+
 .catalog-page__ascending-descending {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2933,7 +3015,14 @@
 
 .catalog-page__ascending-descending .catalog-page__filter-item {
   border: none;
-  opacity: none;
+}
+
+.catalog-page__filter-arrow-link:hover {
+  cursor: pointer;
+}
+
+.catalog-page__filter-arrow-link:hover .catalog-page__filter-item-icon path {
+  fill: var(--black);
 }
 
 .catalog-page__list {
@@ -2966,7 +3055,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -3031,13 +3120,13 @@
 }
 
 .catalog-page__item_new::before {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
-  content: 'New';
+  content: "New";
   position: absolute;
   top: 15px;
   right: 12px;
@@ -3049,7 +3138,7 @@
 }
 
 .catalog-page__item_new::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0px;
   right: 0px;
@@ -3172,7 +3261,7 @@
 }
 
 .catalog-page__purchase-button span {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -3182,7 +3271,7 @@
   margin: 0 12px 0 0;
 }
 
-.catalog-page__purchase-button img {
+.catalog-page__purchase-button svg {
   margin: 0 8px 3px 0;
 }
 
@@ -3205,7 +3294,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -3222,7 +3311,7 @@
 
 .catalog-page__bookmarks span {
   color: var(--indigo);
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -3246,7 +3335,7 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 9px;
-  margin: 45px 0 0 0;
+  margin: 46px 0 0 0;
   padding: 0;
   max-width: 700px;
   overflow: hidden;
@@ -3270,7 +3359,7 @@
   width: 100%;
   text-align: center;
   display: block;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -3310,7 +3399,7 @@
 }
 
 .catalog-page__description h2 {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -3325,7 +3414,7 @@
 }
 
 .catalog-page__description-list {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;

@@ -88,7 +88,7 @@
 }
 
 @mixin h1 {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -97,7 +97,7 @@
 }
 
 @mixin h2 {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -106,7 +106,7 @@
 }
 
 @mixin h3 {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 24px;
@@ -114,7 +114,7 @@
 }
 
 @mixin h4 {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 21px;
@@ -122,7 +122,7 @@
 }
 
 @mixin h5 {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -131,7 +131,7 @@
 }
 
 @mixin h6 {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -140,7 +140,7 @@
 }
 
 @mixin paragraph-1 {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 13px;
@@ -148,7 +148,7 @@
 }
 
 @mixin paragraph-2 {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -156,7 +156,7 @@
 }
 
 @mixin paragraph-3 {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -164,7 +164,7 @@
 }
 
 @mixin paragraph-bold {
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -172,7 +172,7 @@
 }
 
 @mixin button-text {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -274,7 +274,7 @@
 
 @mixin before {
   @include button-text;
-    content: 'New';
+    content: "New";
     position: absolute;
     top: 15px;
     right: 12px;
@@ -285,7 +285,7 @@
 }
 
 @mixin after {
-  content:'';
+  content:"";
   position: absolute;
   top: 0px;
   right: 0px;
@@ -328,6 +328,7 @@
   a {
     text-decoration: none;
   }
+
 }
 
 /*=====================index.html=======================*/
@@ -335,14 +336,13 @@
 .header {
   width: 100%;
   display: grid;
-  grid-template-rows: 42px 278px;
-  font-family: Cuprum;
-
+  grid-template-rows: min-content min-content;
+  font-family: Cuprum, Arial, Tahoma, serif;
   &__container {
     display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 158px 60px;
-    column-gap: 20px;
+    grid-template-columns: 258px auto auto;
+    grid-template-rows: min-content min-content;
+    column-gap: 34px;
   }
 
   &__top {
@@ -437,7 +437,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 9px 23px 9px 20px;
+    padding: 9px 39px;
     max-width: 250px;
     overflow: hidden;
     &:active {
@@ -462,7 +462,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 9px 27px 9px 27px;
+    padding: 9px 17px 9px 11px;
     max-width: 250px;
     overflow: hidden;
     &:active {
@@ -481,6 +481,10 @@
     .header__purchase-cart-icon {
       opacity: 1;
     }
+  }
+
+  &__purchase-cart-counter {
+    margin: 0 10px 0 4px;
   }
 
   &__ordering {
@@ -504,11 +508,12 @@
 
   &__bottom {
     background-color: var(--grey-ultra-light);
+    padding-bottom: 60px;
   }
 
   &__title {
     margin: 0;
-    padding: 45px 30px 45px 30px;
+    padding: 44px 30px 45px 30px;
     max-width: 370px;
     max-height: 158px;
     overflow: hidden;
@@ -524,26 +529,35 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 21px 0 20px;
+    box-sizing: border-box;
+    padding-left: 14px;
     max-height: 158px;
     overflow: hidden;
   }
 
   &__phone {
+    display: flex;
+    justify-content: center;
+    position: relative;
     font-weight: 700;
     font-style: normal;
     font-size: 21px;
     line-height: 30px;
-    background-image: url("../icons/phone-icon.svg");
-    background-repeat: no-repeat;
-    background-position: 36px 10px;
     color: var(--red-light);
-    margin: 11px 0px 3px -4px;
-    padding: 5px 43px 4px 50px;
-    border: 3px solid var(--white);
     box-sizing: border-box;
+    margin: 5px 0px 3px 14px;
+    padding: 3px 0px 3px 0px;
+    min-width: 270px;
+    min-height: 45px;
+    border: 3px solid var(--white);
     span {
-      margin-left: 20px;
+      margin-left: 27px;
+    }
+
+    svg {
+      position: absolute;
+      left: 35px;
+      top: 11px;
     }
   }
 
@@ -551,8 +565,8 @@
     font-size: 14px;
     line-height: 24px;
     color: var(--indigo);
-    margin: 0 5px 5px 0;
     max-width: 321px;
+    margin-left: 13px;
   }
 
   &__authentication  {
@@ -563,6 +577,7 @@
     gap:10px;
     align-self: center;
     margin-bottom: 22px;
+    margin-left: 34px;
     max-height: 120px;
     overflow: hidden;
 
@@ -635,14 +650,48 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
+    padding-left: 0;
   }
 
   &__user {
-    margin-top: 5px;
-    padding: 12px 15px 12px 15px;
+    min-width: 299px;
+    min-height: 45px;
+    margin: 5px 0 0 16px;
+    box-sizing: border-box;
+    padding: 13px 9px 11px 15px;
     background-color: var(--white);
     font-size: 21px;
     line-height: 21px;
+  }
+
+  &__user-link:hover {
+    .header__user-icon path {
+      fill: var(--indigo-light);
+    }
+  }
+
+  &__user-link:visited {
+    color:  var(--black);
+  }
+
+  &__user-link:focus {
+    color:  var(--grey-light);
+    .header__user-icon path {
+      fill: var(--grey-light);
+    }
+  }
+
+  &__logout:hover {
+    .header__logout-icon path {
+      fill: var(--indigo-light);
+    }
+  }
+
+  &__logout:focus {
+    .header__logout-icon path {
+      fill: var(--grey-light);
+    }
   }
 
   &__user-name {
@@ -653,7 +702,7 @@
     display: flex;
     gap: 33px;
     box-sizing: border-box;
-    margin-top: 7px;
+    margin: 8px 0 0 17px;
 
     a {
       color: var(--indigo);
@@ -672,6 +721,21 @@
     }
   }
 
+  &__user-orders:hover,
+  &__personal-area:hover {
+    color: var(--red-light);
+  }
+
+  &__user-orders:hover,
+  &__personal-area:hover {
+    color: var(--red-light);
+  }
+
+  &__user-orders:focus,
+  &__personal-area:focus {
+    color: var(--grey-light);
+  }
+
   &__menu {
     display: flex;
     justify-content: space-between;
@@ -679,6 +743,7 @@
     background-color: var(--indigo);
     box-shadow: inset 0px -5px 0px var(--indigo-shadow);
     overflow: hidden;
+    min-height: 60px;
   }
 
   &__list {
@@ -698,10 +763,8 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    height: inherit;
-    box-sizing: border-box;
-    padding: 0 28px;
-    max-height: 60px;
+
+    min-height: 60px;
     max-width: 190px;
 
     overflow: hidden;
@@ -710,9 +773,13 @@
       font-size: 18px;
       line-height: 24px;
       color: var(--white);
-      max-height: 60px;
+      min-height: 60px;
       max-width: 190px;
+      box-sizing: border-box;
+      padding: 16px 28px 20px 28px;
     }
+
+
   }
 
   &__item:hover {
@@ -724,10 +791,16 @@
     opacity: 0.5;
     color: var(--black);
   }
+
+  &__item-link {
+    span {
+      max-width: 170px;
+    }
+  }
 }
 
 .goods {
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   color: var(--white);
   display: grid;
   grid-template-columns: 1fr;
@@ -965,7 +1038,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: min-content 1fr;
-  font-family: PT Sans;
+  font-family: PT Sans, Arial, Tahoma, serif;
   font-weight: bold;
   margin-top: 59px;
   &__block {
@@ -973,7 +1046,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--cream);
-    font-family: Cuprum;
+    font-family: Cuprum, Arial, Tahoma, serif;
     font-weight: normal;
     text-transform: uppercase;
     padding: 25px 14px 26px 28px;
@@ -1098,7 +1171,7 @@
       margin: 10px 0 10px 0;
     }
 
-    img {
+    svg {
       margin: 0 8px 3px 0;
     }
 
@@ -1146,7 +1219,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 89px 1fr;
-  font-family: Cuprum;
+  font-family: Cuprum, Arial, Tahoma, serif;
   text-transform: uppercase;
   color: var(--indigo);
   margin-top: 70px;
@@ -1265,7 +1338,7 @@
     overflow: hidden;
   }
 
-  &__item:hover {
+  &__item_active {
     cursor: pointer;
     border-top: 2px solid var(--white);
     border-bottom: 2px solid var(--white);
@@ -1319,7 +1392,7 @@
     @include paragraph-1;
     margin: 29px 0 0 0;
     line-height: 25px;
-    max-width: 280px;
+    max-width: 330px;
     overflow: hidden;
   }
 
@@ -1327,7 +1400,7 @@
     @include paragraph-1;
     margin: 27px 0 0 0;
     line-height: 25px;
-    max-width: 280px;
+    max-width: 330px;
     overflow: hidden;
   }
 
@@ -1335,7 +1408,7 @@
     @include paragraph-1;
     margin: 29px 0 0 0;
     line-height: 25px;
-    max-width: 280px;
+    max-width: 330px;
     overflow: hidden;
   }
 
@@ -1407,7 +1480,7 @@
   }
 
   &__item::before {
-    content: '';
+    content: "";
     position: absolute;
     width: 25px;
     height: 3px;
@@ -1443,15 +1516,17 @@
     }
   }
 
-  &__map-button{
+  &__map-button {
+    display: block;
     width: 300px;
     height: 158px;
     padding: 0;
     border: none;
     outline: none;
     background-color: var(--grey-soft);
-    margin: 21px 0 25px 0;
+    margin: 34px 0 25px 0;
     cursor: pointer;
+
   }
 
   &__button {
@@ -1461,8 +1536,6 @@
     box-sizing: border-box;
     padding: 11px 20px 9px 20px;
     cursor:pointer;
-    min-width: 300px;
-    max-width: 470px;
     overflow: hidden;
   }
 }
@@ -1635,8 +1708,9 @@
   position: absolute;
   width: 620px;
   height: 430px;
-  bottom: 352px;
-  right: 530px;
+  bottom: 355px;
+  left: 50%;
+  transform: translateX(-52%);
   background-color: var(--white);
   box-sizing: border-box;
   border-top: 7px solid var(--red-light);
@@ -1738,7 +1812,8 @@
   width: 943px;
   height: 449px;
   bottom: 336px;
-  right: 366px;
+  left: 51%;
+  transform: translateX(-52%);
   box-sizing: border-box;
   border-top: 7px solid var(--red-light);
   background-color: var(--grey-soft);
@@ -1754,11 +1829,7 @@
     outline: none;
     border: none;
     cursor: pointer;
-  }
-
-  iframe {
-    width: 943px;
-    height: 449px;
+    z-index: 1;
   }
 }
 
@@ -1767,8 +1838,9 @@
 .modal-adding-window {
   display: none;
   position: absolute;
-  top: 29%;
-  left: 537px;
+  top: 655px;
+  left: 51%;
+  transform: translateX(-50%);
   width: 620px;
   height: 283px;
   box-sizing: border-box;
@@ -1791,7 +1863,7 @@
   }
 
   &__top {
-    height: 170px;
+    height: 163px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -1812,7 +1884,7 @@
     align-items: center;
     justify-content: center;
     background-color: var(--grey-modal);
-    gap: 10px;
+    gap: 12px;
   }
 
   &__order-button {
@@ -1901,7 +1973,7 @@
   grid-template-rows: 39px min-content min-content min-content;
   gap: 20px;
   &__catalog {
-    margin-bottom: 39px;
+    margin-bottom: 38px;
   }
 
   &__breadcrumbs {
@@ -2035,7 +2107,7 @@
     border-radius: 5px;
     background: #f1f1f1;
     font-size: inherit;
-    font-family: PT Sans;
+    font-family: PT Sans, Arial, Tahoma, serif;
     background-color: var(--grey-soft-light);
     border-radius: 5px;
     outline: none;
@@ -2208,24 +2280,34 @@
 
   &__filter-item {
     @include h5;
-    color: var(--red);
     max-width: 570px;
     overflow: hidden;
+
     a {
+      color: var(--black);
       border-bottom: 1px dotted var(--red-light);
     }
 
-
     a:hover {
-        color: var(--black);
+
         border-bottom: 1px solid var(--red-light);
     }
 
+    span {
+      opacity: 0.3;
+    }
+
     &_active {
+
       a {
-        color: var(--red-light);
         border: none;
       }
+
+      span {
+        opacity: 1;
+        color: var(--red-light);
+      }
+
       @include h5;
       .catalog-page__filter-item-icon {
         transform: rotate(180deg);
@@ -2240,6 +2322,13 @@
     }
   }
 
+  &__filter-item:hover {
+    span {
+      opacity: 1;
+      color: var(--black);
+    }
+  }
+
   &__ascending-descending {
     display: flex;
     gap: 23px;
@@ -2247,7 +2336,13 @@
     padding: 0;
     .catalog-page__filter-item {
       border: none;
-      opacity: none;
+    }
+  }
+
+  &__filter-arrow-link:hover {
+    cursor: pointer;
+    .catalog-page__filter-item-icon path {
+      fill: var(--black);
     }
   }
 
@@ -2352,7 +2447,7 @@
       margin: 0 12px 0 0;
     }
 
-    img {
+    svg {
       margin: 0 8px 3px 0;
     }
 
@@ -2397,7 +2492,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 9px;
-    margin: 45px 0 0 0;
+    margin: 46px 0 0 0;
     padding: 0;
     max-width: 700px;
     overflow: hidden;
