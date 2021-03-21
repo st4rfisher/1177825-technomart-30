@@ -53,6 +53,7 @@
   --indigo: #32425C;
   --indigo-light: #3D546F;
   --indigo-shadow: #293449;
+  --indigo-super-shadow: #161D29;
   --indigo-extra-shadow: #212A3A;
   --black: #000000;
   --grey: #A9A9A9;
@@ -251,7 +252,8 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 9px 39px;
+  padding: 9px 24px 9px 20px;
+  margin: 0 15px;
   max-width: 250px;
   overflow: hidden;
 }
@@ -269,6 +271,10 @@
 
 .header__bookmarks:hover .header__bookmarks-icon {
   opacity: 1;
+}
+
+.header__bookmarks:active {
+  background-color: var(--indigo-super-shadow);
 }
 
 .header__purchase-cart {
@@ -299,6 +305,10 @@
 
 .header__purchase-cart:hover .header__purchase-cart-icon {
   opacity: 1;
+}
+
+.header__purchase-cart:active {
+  background-color: var(--indigo-super-shadow);
 }
 
 .header__purchase-cart-counter {
