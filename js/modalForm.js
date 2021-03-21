@@ -40,7 +40,6 @@ modalForm.addEventListener('submit', function (evt) {
     } else {
         if (isStorageSupport) {
             localStorage.setItem("name", modalFormName.value);
-
         }
     }
 });

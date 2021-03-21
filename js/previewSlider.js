@@ -1,6 +1,6 @@
 const previewItems = document.getElementsByClassName("goods__preview-item");
 const controls = document.getElementsByClassName("goods__control");
-var slideIndex = 1; /* Индекс слайда по умолчанию */
+let slideIndex = 1; /* Индекс слайда по умолчанию */
 
 showSlides(slideIndex);
 
@@ -21,7 +21,7 @@ function currentSlide(n) {
 
 /* Основная функция слайдера */
 function showSlides(n) {
-    var i;
+    let i;
 
     if (n > previewItems.length) {
       slideIndex = 1
