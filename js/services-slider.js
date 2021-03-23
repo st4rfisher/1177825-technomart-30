@@ -3,9 +3,12 @@ const servicesDescriptionItems = document.querySelectorAll('.services__descripti
 const itemActive = document.querySelector('.services__item_active');
 
 for (let i = 0; i < servicesItems.length; i++) {
-  servicesItems[i].addEventListener("click", function() {
+
+  servicesItems[i].addEventListener("click", function(evt) {
     servicesItems.forEach(function(servicesItem, i) {
+      evt.preventDefault();
       servicesItem.classList.remove('services__item_active');
+
     });
     servicesItems[i].classList.add('services__item_active');
 

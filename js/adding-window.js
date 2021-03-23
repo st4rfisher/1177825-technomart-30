@@ -7,7 +7,8 @@ const purchaseCart = document.querySelector('.header__purchase-cart');
 var counter = 0;
 
 for (var i = 0; i <= itemsButtons.length - 1; i++) {
-  itemsButtons[i].addEventListener('click', function () {
+  itemsButtons[i].addEventListener('click', function (evt) {
+    evt.preventDefault();
     showModalAddingWindow();
   });
 };
